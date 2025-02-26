@@ -10,6 +10,6 @@ public static class WeatherEndpoints
         app.MapGet("v1/weather", async ([FromQuery]float latitude, [FromQuery]float longitude, IWeatherService weatherService) => 
         {
             return await weatherService.GetWeather(latitude, longitude);
-        });
+        }).RequireRateLimiting("weatherEndpointLimiter");
     }
 }
