@@ -5,6 +5,10 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bonsai.Backend", "Bonsai.Backend\Bonsai.Backend.csproj", "{9EBDD426-BF03-4A8D-AE63-1EE0EE87E742}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bonsai.Backend.Tests", "Bonsai.Backend.Tests", "{70EECA0E-F83E-EA2A-E4FC-F77E2B795200}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "Bonsai.Backend.Tests\IntegrationTests\IntegrationTests.csproj", "{50FB0BF2-756B-4B5B-9005-005C80F32704}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,8 +31,23 @@ Global
 		{9EBDD426-BF03-4A8D-AE63-1EE0EE87E742}.Release|x64.Build.0 = Release|Any CPU
 		{9EBDD426-BF03-4A8D-AE63-1EE0EE87E742}.Release|x86.ActiveCfg = Release|Any CPU
 		{9EBDD426-BF03-4A8D-AE63-1EE0EE87E742}.Release|x86.Build.0 = Release|Any CPU
+		{50FB0BF2-756B-4B5B-9005-005C80F32704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50FB0BF2-756B-4B5B-9005-005C80F32704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50FB0BF2-756B-4B5B-9005-005C80F32704}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{50FB0BF2-756B-4B5B-9005-005C80F32704}.Debug|x64.Build.0 = Debug|Any CPU
+		{50FB0BF2-756B-4B5B-9005-005C80F32704}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{50FB0BF2-756B-4B5B-9005-005C80F32704}.Debug|x86.Build.0 = Debug|Any CPU
+		{50FB0BF2-756B-4B5B-9005-005C80F32704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50FB0BF2-756B-4B5B-9005-005C80F32704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50FB0BF2-756B-4B5B-9005-005C80F32704}.Release|x64.ActiveCfg = Release|Any CPU
+		{50FB0BF2-756B-4B5B-9005-005C80F32704}.Release|x64.Build.0 = Release|Any CPU
+		{50FB0BF2-756B-4B5B-9005-005C80F32704}.Release|x86.ActiveCfg = Release|Any CPU
+		{50FB0BF2-756B-4B5B-9005-005C80F32704}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{50FB0BF2-756B-4B5B-9005-005C80F32704} = {70EECA0E-F83E-EA2A-E4FC-F77E2B795200}
 	EndGlobalSection
 EndGlobal

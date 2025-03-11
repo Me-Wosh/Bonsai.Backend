@@ -1,6 +1,8 @@
 using System.Globalization;
+using System.Text.Json;
 using Bonsai.Backend.Converters;
 using Bonsai.Backend.Models;
+using Serilog;
 
 namespace Bonsai.Backend.Services;
 
@@ -35,9 +37,25 @@ public class WeatherService : IWeatherService
         {
             var errorMessage = await response.Content.ReadAsStringAsync();
 
+            if (string.IsNullOrWhiteSpace(errorMessage))
+            {
+                errorMessage = "No error details were provided.";
+
+                Log.Error(errorMessage);
+
+                return Results.Problem(
+                    statusCode: (int)response.StatusCode, 
+                    detail: errorMessage
+                );
+            }
+
+            var errorResponse = JsonSerializer.Deserialize<ErrorResponse>(errorMessage, JsonSerializerOptions.Web);
+
+            Log.Error("{@ErrorResponse}", errorResponse);
+
             return Results.Problem(
                 statusCode: (int)response.StatusCode, 
-                detail: errorMessage
+                extensions: new Dictionary<string, object?> { { "error", errorResponse!.Error } }
             );
         }
 

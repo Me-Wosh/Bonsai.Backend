@@ -8,5 +8,4 @@ public class WeatherType
     public const string Snowy = "snowy";
     public const string Sunny = "sunny";
     public const string Thundery = "thundery";
-    public const string Unidentified = "unidentified";
 }

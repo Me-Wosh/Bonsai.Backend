@@ -48,6 +48,6 @@ public static class WeatherConverter
             return WeatherType.Sunny;
         }
 
-        return WeatherType.Unidentified;
+        throw new ArgumentException($"Unknown weather \"{weather}\"");
     }
 }
